@@ -9,7 +9,7 @@
     --text-color: #fff;
     --background-color: #e3f9ff;
     --primary-color: #3a4452;
-    --secondary-color: #33ffd8;
+    --secondary-color: #00d1ab;
 }
 
 body {
@@ -17,14 +17,18 @@ body {
     .container {
         width: 100%;
         height: 100vh;
-        background: var(--background-color);
+        /* background: var(--background-color); */
+        background: url("images/background-3.jpe") no-repeat center center/cover;
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
     .calculator {
-        background: var(--primary-color);
+        /* background: var(--primary-color); */
+        box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+        border: 3px solid rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(8px);
         padding: 20px;
         border-radius: 10px;
 
@@ -34,12 +38,15 @@ body {
             width: 60px;
             height: 60px;
             border-radius: 10px;
-            box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.2), 5px 5px 15px rgba(0, 0, 0, 0.3);
             background: transparent;
-            font-size: 20px;
+            font-size: 24px;
+            font-weight: 800;
             color: var(--text-color);
             cursor: pointer;
             margin: 10px;
+            -webkit-text-stroke: 1px rgba(0, 0, 0, 0.2);
+            text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
         }
 
         form .display {
@@ -61,6 +68,8 @@ body {
 
         form input.operator {
             color: var(--secondary-color);
+            /* -webkit-text-stroke: 1px rgba(0, 0, 0, 0.2);
+            text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5); */
         }
     }
 }
